@@ -1,14 +1,6 @@
 <div *ngIf="data$ | async as data">
   <span>longitude: </span>{{data.iss_position.longitude}}
   <span>latitude: </span>{{data.iss_position.latitude}}
-  <!-- <button kendoButton *ngIf="!opened" (click)="open(data.iss_position.longitude, data.iss_position.latitude)">Add Note</button> -->
-  <!-- <kendo-dialog title="Add Note" *ngIf="opened" (close)="close('cancel')" [minWidth]="250" [width]="450">
-    Note:<input type="text">
-    <kendo-dialog-actions>
-      <button kendoButton (click)="close('Cancel')">Cancel</button>
-      <button kendoButton (click)="close('OK')" primary="true">OK</button>
-    </kendo-dialog-actions>
-  </kendo-dialog> -->
   <button (click)="showDialog(data.iss_position.longitude, data.iss_position.latitude)" class="k-button">Add Client</button>
  
   <div kendoDialogContainer></div>
